@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - localhost@localhost" uuid="c8dedefe-8961-4842-ae3d-fc0ef770adc3">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>library.pg_catalog library.public</schema-pattern>
+      <default-schemas>library.public</default-schemas>
+    </data-source>
+    <data-source name="PostgreSQL - postgres@localhost" uuid="727776b5-360b-4a11-a6d0-e4472c297201">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>postgres.pg_catalog postgres.public</schema-pattern>
+      <default-schemas>postgres.public</default-schemas>
+    </data-source>
+  </component>
+</project>
