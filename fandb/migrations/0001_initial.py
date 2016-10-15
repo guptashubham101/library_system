@@ -31,6 +31,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=255)),
                 ('author', models.CharField(max_length=255)),
                 ('domain', models.CharField(max_length=255)),
+                ('quantity', models.IntegerField()),
             ],
             options={
                 'db_table': 'books',

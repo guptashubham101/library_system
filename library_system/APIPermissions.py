@@ -14,10 +14,7 @@ class AuthToken(BasePermission):
             print 'pos'
             last_month = datetime.today() - timedelta(days=100)
             print last_month
-            session=Session.objects.all()
-            for s in session:
-                print s.id,s.created_on,s.updated_on,s.session_id,s.user_id,s.is_active
-            print
+
             session = Session.objects.filter(session_id=headers['HTTP_SESSIONID'],
                                              created_on__gte=last_month, is_active=True).first()
             print session

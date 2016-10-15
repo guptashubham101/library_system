@@ -18,11 +18,11 @@ class Books(models.Model):
 
     ISBN = models.IntegerField()
     availability = models.BooleanField(default=False)
-
     is_issued = models.BooleanField(default=False)
     name = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     domain = models.CharField(max_length=255)
+    quantity = models.IntegerField()
 
     class Meta:
         db_table = 'books'
@@ -30,8 +30,10 @@ class Books(models.Model):
 
 class Fine(models.Model):
     student = models.ForeignKey('Student')
+    books = models.ForeignKey('Books')
     is_paid = models.BooleanField(default=False)
     days = models.IntegerField()
+    amount = models.IntegerField()
 
     class Meta:
         db_table = 'fine'
