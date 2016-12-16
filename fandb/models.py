@@ -54,13 +54,15 @@ class LibraryAdmin(models.Model):
 class Session(models.Model):
     session_id = models.CharField(max_length=255, primary_key=True, default=uuid.uuid4, editable=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField()
+    updated_on = models.DateTimeField(auto_now_add=True)
     user_id = models.IntegerField()
     is_active = models.BooleanField(default=False)
-    user_type = models.CharField(max_length=255)
 
     class Meta:
         db_table = 'session'
+
+    def __str__(self):
+        return "%s" % (self.session_id)
 
 
 class Student(models.Model):

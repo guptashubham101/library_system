@@ -20,14 +20,11 @@ class AuthToken(BasePermission):
             print session
             if session:
                 print 'enter'
-                if session.user_type == 'library_admin':
-                    print '1'
-                    request.user = LibraryAdmin.objects.get(pk=session.user_id)
-                elif session.user_type == 'student':
-                    print '2'
-                    request.user = Student.objects.get(pk=session.user_id)
-                else:
-                    print 'No such user exists'
+
+                request.user = LibraryAdmin.objects.get(pk=session.user_id)
+
+
+
                 return request.user
             else:
                 return False

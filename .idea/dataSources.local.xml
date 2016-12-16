@@ -13,5 +13,11 @@
       <schema-pattern>postgres.pg_catalog postgres.public</schema-pattern>
       <default-schemas>postgres.public</default-schemas>
     </data-source>
+    <data-source name="PostgreSQL - library_closs@squirtleinstance.c6z4be43fxue.us-west-2.rds.amazonaws.com" uuid="52c5a61c-0b62-4ecd-96ab-5708745f1384">
+      <secret-storage>master_key</secret-storage>
+      <user-name>squirle</user-name>
+      <schema-pattern>library_closs.pg_catalog library_closs.public</schema-pattern>
+      <default-schemas>library_closs.public</default-schemas>
+    </data-source>
   </component>
 </project>
