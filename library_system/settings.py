@@ -130,11 +130,11 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'squirtleinstance.c6z4be43fxue.us-west-2.rds.amazonaws.com',
+        'HOST': 'localhost',
         'PORT': 5432,
-        'NAME': 'library_closs',
-        'USER': 'squirle',
-        'PASSWORD': 'qwertyuiop789'
+        'NAME': 'library',
+        'USER': 'postgres',
+        'PASSWORD': 'root'
     }
 }
 
